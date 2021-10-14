@@ -1,0 +1,60 @@
+
+      tr:nth-child(even){
+        background-color: #ADD8E6;
+      }
+
+      tr:nth-child(odd){
+        background-color: #E0FFFF;
+      }
+      
+      table{
+        width: 80%;
+        border-collapse: collapse; 
+        border: black;
+        text-align: center;
+        text-anchor: middle;
+      }
+      
+      input[type="text"]{
+        background:#87CEFA;
+        color:rgba(8, 3, 85, 0.973);
+      }
+
+      input[type="number"]{
+        background:#87CEFA;
+        color:rgba(8, 3, 85, 0.973)
+      }
+
+      input[type="date"]{
+        background:#87CEFA;
+        color:rgba(8, 3, 85, 0.973);
+      }
+
+      input[type="password"]{
+        background:#87CEFA;
+        color:rgba(8, 3, 85, 0.973);
+      }
+
+      input[type="submit"]{
+        background: #98b3c4;
+        color:rgba(8, 3, 85, 0.973);
+      }
+
+      body{
+        background-color: #F0E68C ;
+        color:rgb(16, 0, 53);
+      }
+
+      fieldset{
+        background-color: #20B2AA;
+      }
+
+      h2{
+        color:rgb(16, 0, 53);
+      }
+
+      td:hover(){
+        background-color: orange;
+      }
+      
+      tr:hover {background-color: yellow;}
