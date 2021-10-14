@@ -16,13 +16,14 @@ validar();
   </head>
 <body >
   <br>
-  <center><b>
+    <div align='center'> 
+    <strong>
     Bienvenido a mi crud 
     <?= $_SESSION["nombre"]?>
     <?= $_SESSION["apellido1"]?>
     <?= $_SESSION["apellido2"]?>
     <a href="logout.php" >Log out</a>
-    </b></center>
+    </strong></div>
     <br>
 <?php
 // Create connection
@@ -42,8 +43,10 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     echo "\n<tr>\n\t<td>".$row["column1"].TD.$row["column2"].TD.$row["column3"].TD.$row["column4"].TD.$row["column5"]."</td>";
-    echo "<td><a href='eliminar.php?colum1=".$row["column1"]."' onclick='return confirmar()'><img src='./img/eliminar.png'></a></td><td>
-          <a href='update.php?colum1=".$row["column1"]."' onclick='return confirmarModificar()'><img src='./img/update.png'></td></tr>\n";
+    echo "<td>";
+    echo "<a href='eliminar.php?colum1=".$row["column1"]."' onclick='return confirmar()'><img src='./img/eliminar.png'></a></td>";
+    echo "<td>";
+    echo "<a href='update.php?colum1=".$row["column1"]."' onclick='return confirmarModificar()'><img src='./img/update.png'></td></tr>\n";
   }
   echo "</table></center>";
 } else {
@@ -53,18 +56,18 @@ $conn->close();
 ?>
 <br>
 <form action="insertar.php" method="post">
-<center>
+<div align='center'>
 <fieldset style="width:500px">
-<legend> <b> <center> Inserte la informacion del nuevo registro</center></b></legend> <br>
-  <b> Id:</b> <input type="number" name="identificador" id="" value="1975" class="w3-input" required><br>
-  <b> Nombre:</b> <input type="text" name="nombre" id="" value="Humberto" class="w3-input"><br>
-  <b> Fecha:</b> <input type="date" name="fecha" id="" value="1975-06-23"><br><br>
-  <b> Numero:</b> <input type="number" name="numero" id="" value="" class="w3-input"><br> 
-  <b> Num.Double:</b> <input type="number" name="numdouble" id="" value="" class="w3-input"><br>
+<legend> <strong> <div align='center'> Inserte la informacion del nuevo registro</div></strong></legend> <br>
+  <strong> Id:</strong> <input type="number" name="identificador" id="" value="1975" class="w3-input" required><br>
+  <strong> Nombre:</strong> <input type="text" name="nombre" id="" value="Humberto" class="w3-input"><br>
+  <strong> Fecha:</strong> <input type="date" name="fecha" id="" value="1975-06-23"><br><br>
+  <strong> Numero:</strong> <input type="number" name="numero" id="" value="" class="w3-input"><br> 
+  <strong> Num.Double:</strong> <input type="number" name="numdouble" id="" value="" class="w3-input"><br>
   <br>
   <input type="submit" value="Aceptar"><br><br>
 </fieldset>
-</center>
+</div>
 </form>
 
 </body>
