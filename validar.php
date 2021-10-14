@@ -11,9 +11,9 @@
 <body>
     <?php
     include("./inc/settings.php");
-    //print_r($_POST);
+    
     $query="SELECT * FROM usuarios WHERE numero_de_empleado = '$_POST[username]' AND pass= md5('$_POST[pwd]')";
-    // echo $query;
+    
 
 
 
@@ -25,12 +25,12 @@
     }
 
     $result = $conn->query($query);
-    //print_r($result);
+    
     if ($result->num_rows > 0) {
       
       // output data of each row
       $row = $result->fetch_assoc();
-    // echo "Acceso de usuario validado, redirigiendo a la pagina principal.";
+    
       session_start();
       $_SESSION["nombre"] = $row["nombre"];
       $_SESSION["apellido1"] = $row["apellido1"];
