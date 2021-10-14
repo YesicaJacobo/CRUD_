@@ -35,18 +35,18 @@ if ( $conn->query($query)){
       
       ?><br><br>
       <form action="update2.php" method="POST">
-        <center>
+        <div align='center'>
           <fieldset style="width:500px">
-            <legend> <center> <b> Cambie la información del registro.</b></center></legend> <br>
-              <b> Id:</b> <input type="number" name="identificador" id="" value="<?= $row['column1'] ?>" class="w3-input" readonly><br>
-              <b> Nombre:</b> <input type="text" name="nombre" id="" value="<?= $row['column2'] ?>" class="w3-input"><br>
-              <b> Fecha:</b> <input type="date" name="fecha" id="" value="<?= $row['column3'] ?>"><br>
-              <b> Numero:</b> <input type="number" name="numero" id="" value="<?= $row['column4'] ?>" class="w3-input"><br> 
-              <b> Num.Double:</b> <input type="number" name="numdouble" id="" value="<?= $row['column5'] ?>" class="w3-input"><br>
+            <legend> <center> </strong> Cambie la información del registro.</b></center></legend> <br>
+              </strong> Id:</b> <input type="number" name="identificador" id="" value="<?= $row['column1'] ?>" class="w3-input" readonly><br>
+              </strong> Nombre:</b> <input type="text" name="nombre" id="" value="<?= $row['column2'] ?>" class="w3-input"><br>
+              </strong> Fecha:</b> <input type="date" name="fecha" id="" value="<?= $row['column3'] ?>"><br>
+              </strong> Numero:</b> <input type="number" name="numero" id="" value="<?= $row['column4'] ?>" class="w3-input"><br> 
+              </strong> Num.Double:</b> <input type="number" name="numdouble" id="" value="<?= $row['column5'] ?>" class="w3-input"><br>
               <br>
               <input type="submit" value="Modificar"><br> <br>
           </fieldset>
-        </center>
+        </div>
       </form>
       <?php
     }
