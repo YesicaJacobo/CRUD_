@@ -14,7 +14,7 @@
     
         <form action="validar.php" method="post">
             <fieldset style="width:500px">   
-            <legend> Introcuzca los siguientes datos </legend> 
+            <legend> <strong> Introcuzca los siguientes datos <strong> </legend> 
                 <h2>User: <input type="text" name="username" id="" value="" placeholder="userd" required><br></h2> 
                 <h2>Password: <input type="password" placeholder="userd" name="pwd" id="" value="" required><br></h2>
                 <input type="submit" value="Login"><br> 

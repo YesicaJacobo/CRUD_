@@ -37,7 +37,7 @@ if ( $conn->query($query)){
       <form action="update2.php" method="POST">
         <div align='center'>
           <fieldset style="width:500px">
-            <legend> <center> </strong> Cambie la información del registro.</b></center></legend> <br>
+            <legend>  <div align='center'> </strong> Cambie la información del registro.</b></div></legend> <br>
               </strong> Id:</b> <input type="number" name="identificador" id="" value="<?= $row['column1'] ?>" class="w3-input" readonly><br>
               </strong> Nombre:</b> <input type="text" name="nombre" id="" value="<?= $row['column2'] ?>" class="w3-input"><br>
               </strong> Fecha:</b> <input type="date" name="fecha" id="" value="<?= $row['column3'] ?>"><br>
