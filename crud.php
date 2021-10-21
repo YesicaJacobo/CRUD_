@@ -43,10 +43,12 @@ if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
     echo "\n<tr>\n\t<td>".$row["column1"].TD.$row["column2"].TD.$row["column3"].TD.$row["column4"].TD.$row["column5"]."</td>";
-    echo "<td>";
-    echo "<a href='eliminar.php?colum1=".$row["column1"]."' onclick='return confirmar()'><img src='./img/eliminar.png'></a></td>";
-    echo "<td>";
-    echo "<a href='update.php?colum1=".$row["column1"]."' onclick='return confirmarModificar()'><img src='./img/update.png'></td></tr>\n";
+    //eliminar    //modificamos crud, functiones y eliminar
+    echo "<td><form action ='eliminar.php' method = 'post'>";
+    echo "<input type ='hidden' name = 'column1' value = '".$row["column1"]."'>";
+    echo "<input type ='submit' value ='' style =\"background:url('./img/eliminar.png'); border: 0; display: block; width: 24px; heigth: 24px;\" onclick='return confirmar()'></form></td> \n";
+    //actualizar
+    echo "<td> <a href='update.php?colum1=".$row["column1"]."' onclick='return confirmarModificar()'><img src='./img/update.png'></td></tr>\n";
   }
   echo "</table></center>";
 } else {

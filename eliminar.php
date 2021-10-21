@@ -5,7 +5,7 @@ validar();
 <?php
 
 
-$id=$_GET['colum1'];
+$id=$_POST['column1'];
 
 $query="DELETE FROM table1 WHERE column1=$id;";
 

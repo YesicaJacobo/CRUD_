@@ -2,7 +2,8 @@
 
 function confirmar() {
     if (confirm("Va a eliminar un registro, esta usted seguro?")) {
-        return true;
+        //return true;
+        document.form.submit();
     }
     return false;
 }
