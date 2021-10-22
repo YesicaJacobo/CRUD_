@@ -18,7 +18,7 @@ validar();
 <?php
 
 
-$query="SELECT column1, column2, column3, column4, column5 FROM table1 WHERE column1 = ".$_GET['colum1'].";";
+$query="SELECT column1, column2, column3, column4, column5 FROM table1 WHERE column1 = ".$_POST['column1'].";";
 
 
 // Create connection
